@@ -8,6 +8,7 @@ export default defineSchema({
     name: v.string(),
   }),
   messages: defineTable({
+    roleName: v.string(),
     author: v.union(v.literal("user"), v.literal("assistant")),
     threadId: v.id("threads"),
     // body starts out undefined for assistant messages

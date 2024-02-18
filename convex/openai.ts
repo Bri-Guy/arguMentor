@@ -6,6 +6,8 @@ import {
 } from "openai";
 import { action } from "./_generated/server";
 import { v } from "convex/values";
+import { useAction, useQuery } from "convex/react";
+import { api } from "../convex/_generated/api";
 
 if (!process.env.OPENAI_API_KEY) {
   throw new Error(
@@ -77,13 +79,15 @@ export const chat = action({
       });
       lastInstructions = instructions;
     }
+    const { identities } = await ctx.runMutation(internal.messages.getNames, {});
+    const identityStrings: string[] = identities.map(identity => `[${identity}]`);
 
     try {
       const openaiResponse = await openai.createChatCompletion({
         model: "xu.briguy@gmail.com/Mistral-7B-Instruct-v0.2-2024-02-17-20-53-49",
         messages: gptMessages,
-        stop: ["<human>", "<SYS>", "<<SYS>>", "[/INST]", "</s>", "<</SYS>>", "\n\n"],
-        max_tokens: 150,
+        stop: ["<human>", "<SYS>", "<<SYS>>", "[/INST]", "</s>", "<</SYS>>"].concat(identityStrings),
+        max_tokens: 250,
       });
       await ctx.runMutation(internal.messages.update, {
         messageId: botMessageId,
@@ -135,16 +139,6 @@ export const get_response = action({
 
     const gptMessages = [];
     let lastInstructions = null;
-    for (const { body, author, instructions } of messages) {
-      if (instructions && instructions !== lastInstructions) {
-        gptMessages.push({
-          role: "system" as const,
-          content: instructions,
-        });
-        lastInstructions = instructions;
-      }
-      gptMessages.push({ role: author, content: body });
-    }
     if (instructions !== lastInstructions) {
       gptMessages.push({
         role: "system" as const,
@@ -152,18 +146,41 @@ export const get_response = action({
       });
       lastInstructions = instructions;
     }
+    for (const { body, roleName, author, instructions } of messages) {
+      // if (instructions && instructions !== lastInstructions) {
+      //   gptMessages.push({
+      //     role: "system" as const,
+      //     content: instructions,
+      //   });
+      //   lastInstructions = instructions;
+      // }
+      // gptMessages.push({ role: "user" as const, content: body });
+      gptMessages.push({ role: author, content: "[" + roleName + "]: " + body });
+    }
+    gptMessages.push({ role: "system" as const, content: "Please briefly provide your opinion on the feedback above, and then add your own feedback on the user's idea." });
+    gptMessages.push({ role: "assistant" as const, content: "[" + identityName + "]: " });
 
+    const { identities } = await ctx.runMutation(internal.messages.getNames, {});
+    const identityStrings: string[] = identities.map(identity => `[${identity}]`);
+    console.log(gptMessages);
     try {
       const openaiResponse = await openai.createChatCompletion({
         model: "xu.briguy@gmail.com/Mistral-7B-Instruct-v0.2-2024-02-17-20-53-49",
         messages: gptMessages,
-        stop: ["<human>", "<SYS>", "<<SYS>>", "[/INST]", "</s>", "<</SYS>>", "\n\n"],
-        max_tokens: 150,
+        stop: ["<human>", "<SYS>", "<<SYS>>", "[/INST]", "</s>", "<</SYS>>"].concat(identityStrings),
+        max_tokens: 250,
       });
+      const response_string = openaiResponse.data.choices[0].message?.content;
+      var response = response_string;
+      const index = response_string?.indexOf("[");
+      console.log(index);
+      if (typeof (index) === 'number' && index > 0) {
+        response = response_string?.substring(index);
+      }
       await ctx.runMutation(internal.messages.update, {
         messageId: botMessageId,
         patch: {
-          body: openaiResponse.data.choices[0].message?.content,
+          body: response,
           usage: openaiResponse.data.usage,
           updatedAt: Date.now(),
           ms: Number(openaiResponse.headers["openai-processing-ms"]),

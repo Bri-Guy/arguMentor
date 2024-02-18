@@ -3,6 +3,22 @@ import { query, internalMutation } from "./_generated/server";
 import { v } from "convex/values";
 import { Doc, Id } from "./_generated/dataModel";
 
+export const getNames = internalMutation({
+  args: {},
+  handler: async (ctx) => {
+    const identityDocs = await ctx.db
+      .query("identities")
+      .take(21); // 10 pairs of prompt/response and our most recent message.
+    const identities = await Promise.all(
+      identityDocs.reverse().map(async (msg) => {
+        const name = msg.name;
+        return { name };
+      })
+    );
+    return { identities };
+  },
+});
+
 export const list = query({
   args: { paginationOpts: paginationOptsValidator },
   handler: async (ctx, { paginationOpts }) => {
@@ -36,6 +52,7 @@ export const send = internalMutation({
   handler: async (ctx, { body, identityName, threadId }) => {
     const userMessageId = await ctx.db.insert("messages", {
       body,
+      roleName: "user",
       author: "user",
       threadId,
     });
@@ -47,6 +64,7 @@ export const send = internalMutation({
     if (!identity) throw new Error("Can't find identity " + identityName);
     const { instructions, _id: identityId } = identity;
     const botMessageId = await ctx.db.insert("messages", {
+      roleName: identityName,
       author: "assistant",
       threadId,
       identityId,
@@ -85,6 +103,7 @@ export const receive = internalMutation({
     if (!identity) throw new Error("Can't find identity " + identityName);
     const { instructions, _id: identityId } = identity;
     const botMessageId = await ctx.db.insert("messages", {
+      roleName: identityName,
       author: "assistant",
       threadId,
       identityId,
