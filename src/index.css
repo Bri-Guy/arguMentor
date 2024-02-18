@@ -8,21 +8,33 @@
 
 @font-face {
   font-family: 'Biko';
-  src: url('biko/Biko_Regular.otf') format('otf'),
-       url('biko/Biko_Black.otf') format('otf'),
-       url('biko/Biko_Bold.otf') format('otf');
-  /* Add additional font formats as needed */
+  src: url('fonts/Biko_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Biko';
+  src: url('fonts/Biko_Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Biko';
+  src: url('fonts/Biko_Black.otf') format('opentype');
+  font-weight: 900; /* or 'bold' depending on the font file */
+  font-style: normal;
 }
 
 body {
-  font-family: "Biko", Roboto,
+  font-family: 'Biko',  Roboto,
     sans-serif;
 }
 
 main {
   padding-top: 5em;
   padding-bottom: 5em;
-  background-color: #DDE5B6;
   width: min(800px, 95vw);
   margin: 0 auto;
 }
@@ -98,8 +110,9 @@ li span:nth-child(3) {
   white-space: nowrap;
 }
 
-section[type="old chat"] {
+summary {
   background-color: #6C584C;
+  color: white;
 }
 
 form {
