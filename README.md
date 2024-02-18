@@ -1,3 +1,5 @@
+###ArguMentor
+
 Hello! We are ArguMentor, and our application productively challenges your arguments rather than agreeing with them. 
 
 We believe that most LLMs are too agreeable, which is nice but not incredibly conducive to all use cases. That's where ArguMentor steps in - our application actively debates with you over your ideas to highlight flaws and weaknesses in your argument. 
