@@ -26,6 +26,7 @@ export function Thread({
   const [identityName, setIdentityName] = useState<string>();
   const [newMessageText, setNewMessageText] = useState("");
   const sendMessage = useAction(api.openai.chat);
+  const noMessage = useAction(api.openai.get_response);
   useEffect(() => {
     if (identities?.length && !identityName) {
       const lastMessage = messages[messages.length - 1];
@@ -45,6 +46,12 @@ export function Thread({
     if (!identityName) throw new Error("No identity selected");
     setNewMessageText("");
     await sendMessage({ body: newMessageText, identityName, threadId });
+  }
+  async function botResponse() {
+    // event.preventDefault();
+    if (!identityName) throw new Error("No identity selected");
+    // setNewMessageText("");
+    await noMessage({ identityName, threadId });
   }
   return (
     <>
@@ -83,6 +90,9 @@ export function Thread({
           cols={40}
         />
         <input type="submit" value="Send" disabled={!newMessageText} />
+        <button type="button" onClick={botResponse} disabled={messages.length == 0}>
+          Bot Response
+        </button>
       </form>
     </>
   );
