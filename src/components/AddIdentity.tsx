@@ -29,10 +29,12 @@ export function AddIdentity() {
             setNewIdentityInstructions("");
           }}
         >
-          <input
+          <textarea
             value={newIdentityName}
             onChange={(event) => setNewIdentityName(event.target.value)}
             placeholder="Identity Name"
+            rows = {2}
+            cols = {8}
           />
           <textarea
             value={newIdentityInstructions}
