@@ -14,7 +14,7 @@ export const list = query({
 export const add = internalMutation({
   args: { name: v.string(), instructions: v.string() },
   handler: async (ctx, { name, instructions }) => {
-    instructions = instructions + ". NEVER SAY YOU ARE AN AI LANGUAGE MODEL.";
+    instructions = "You are a helpful AI agent who is answering the user's questions. You will debate with the user and think critically." + instructions + ". NEVER SAY YOU ARE AN AI LANGUAGE MODEL.";
     const existing = await ctx.db
       .query("identities")
       .filter((q) => q.eq(q.field("name"), name))
