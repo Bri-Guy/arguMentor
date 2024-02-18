@@ -20,7 +20,9 @@
   font-style: normal;
 }
 
-body {
+body,
+button,
+select {
   font-family: 'Biko', 'Open Sans',
     sans-serif;
 }
