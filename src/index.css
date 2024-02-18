@@ -1,19 +1,33 @@
 /* reset */
 * {
   margin: 0;
-  padding: 0;
+  padding: 5px;
   border: 0;
   line-height: 1.5;
 }
 
+@font-face {
+  font-family: 'Biko';
+  src: url('fonts/Biko_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Biko';
+  src: url('fonts/Biko_Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
-  font-family: system-ui, "Playfair Display", "Poppins", Roboto,
+  font-family: 'Biko', 'Open Sans',
     sans-serif;
 }
 
 main {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   width: min(800px, 95vw);
   margin: 0 auto;
 }
@@ -30,7 +44,7 @@ h1 {
   margin-bottom: 16px;
 }
 .badge span {
-  background-color: #6C584C;
+  background-color: #4ecca3;
   color: #F0EAD2;
   border-radius: 6px;
   font-weight: bold;
@@ -74,6 +88,7 @@ li:last-child {
 }
 
 li span:nth-child(1) {
+  color: #4ecca3;
   font-weight: bold;
   margin-right: 4px;
   white-space: nowrap;
@@ -83,9 +98,20 @@ li span:nth-child(2) {
   word-break: break-word;
 }
 li span:nth-child(3) {
-  color: #DDE5B6;
+  color: #4ecca3;
   margin-left: auto;
   white-space: nowrap;
+}
+
+summary {
+  background-color: #BBA899;
+  color: white;
+  border-radius: 10px;
+}
+
+img {
+  max-width: 100%; /* Ensure the logo doesn't exceed the width of its container */
+  height: auto; /* Maintain the aspect ratio */
 }
 
 form {
@@ -112,20 +138,20 @@ textarea {
 input[type="submit"],
 button {
   margin-left: 4px;
-  background: #DDE5B6;
+  background: #379634;
   color: #F0EAD2;
   padding: 6px 12px 6px 12px;
   border-radius: 8px;
   font-size: 16px;
-  background-color: #ADC178;
+  background-color: #379634;
 }
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: #ADC178;
+  background-color: #4ecca3;
 }
 
 input[type="submit"]:disabled,
 button:disabled {
-  background-color: #ADC178;
+  background-color: #F0EAD2;
 }
