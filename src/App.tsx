@@ -30,6 +30,7 @@ export default function App() {
         <button onClick={() => loadMore(100)}>Load More</button>
       )}
       <br></br>
+      <section type="old chat">
       {messages
         .reduce<UIMessage[][]>((threads, message) => {
           const thread = threads.find(
@@ -51,6 +52,7 @@ export default function App() {
             <Thread messages={messages} threadId={messages[0].threadId} />
           </details>
         ))}
+      </section>
         <br></br>
       {newThreadId && (
         <>
