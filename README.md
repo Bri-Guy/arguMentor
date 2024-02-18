@@ -24,7 +24,7 @@ First, choose an agent that you want to simulate a situation with. After, input 
 
 We fine-tuned our LLM to reflect more critical thinking with an Anthropic dataset using Together.ai. Additionally, we created a second model that was fine-tuned using Monster API. Our front-end was modeled off of a Convex template and our backend is also powered by Convex. 
 
-![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/c45f5e24-563b-40dc-8458-cea7a81d9120)
+![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/c45f5e24-563b-40dc-8458-cea7a81d9120 | width = 100)
 ![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/8c943c93-1101-421f-9c3b-049c76f7bbd7)
 ![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/b0048da3-f3b5-4efd-a061-df657d532174)
 
