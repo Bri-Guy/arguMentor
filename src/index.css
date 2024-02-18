@@ -1,7 +1,7 @@
 /* reset */
 * {
   margin: 0;
-  padding: 2px;
+  padding: 5px;
   border: 0;
   line-height: 1.5;
 }
@@ -20,15 +20,8 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Biko';
-  src: url('fonts/Biko_Black.otf') format('opentype');
-  font-weight: 900; /* or 'bold' depending on the font file */
-  font-style: normal;
-}
-
 body {
-  font-family: 'Biko',  Roboto,
+  font-family: 'Biko', 'Roboto',
     sans-serif;
 }
 
@@ -140,17 +133,17 @@ textarea {
 input[type="submit"],
 button {
   margin-left: 4px;
-  background: #41710D;
+  background: #90BA64;
   color: #F0EAD2;
   padding: 6px 12px 6px 12px;
   border-radius: 8px;
   font-size: 16px;
-  background-color: #4ecca3;
+  background-color: #90BA64;
 }
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: #90BA64;
+  background-color: #41710D;
 }
 
 input[type="submit"]:disabled,
