@@ -26,7 +26,8 @@ We fine-tuned our LLM to reflect more critical thinking with an Anthropic datase
 
 ![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/c45f5e24-563b-40dc-8458-cea7a81d9120)
 ![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/8c943c93-1101-421f-9c3b-049c76f7bbd7)
-![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/3924bc2f-d3cb-433e-8e58-28ddfd714744)
+![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/b0048da3-f3b5-4efd-a061-df657d532174)
+
 
 
 
