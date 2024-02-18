@@ -109,6 +109,11 @@ summary {
   border-radius: 10px;
 }
 
+img {
+  max-width: 100%; /* Ensure the logo doesn't exceed the width of its container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
 form {
   display: flex;
   justify-content: center;

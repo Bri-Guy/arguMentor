@@ -24,8 +24,8 @@ export default function App() {
 
   return (
     <main>
-      <h1>ArguMentor</h1>
-      <p> The following are LLMs that can argue with you and provide useful criticism for your ideas! </p>
+      <h1><img src="images/argumentor.png" alt="ArguMentor"></h1>
+      <p> <em>ArguMentor provides finetuned LLMs that can argue with you and provide useful criticism for your ideas!</em> </p>
       {status === "CanLoadMore" && (
         <button onClick={() => loadMore(100)}>Load More</button>
       )}
