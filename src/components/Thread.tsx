@@ -75,10 +75,12 @@ export function Thread({
             </option>
           ))}
         </select>
-        <input
+        <textarea
           value={newMessageText}
           onChange={(event) => setNewMessageText(event.target.value)}
           placeholder="Write a message…"
+          rows={2}
+          cols={40}
         />
         <input type="submit" value="Send" disabled={!newMessageText} />
       </form>

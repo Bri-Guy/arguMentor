@@ -24,8 +24,8 @@ export default function App() {
 
   return (
     <main>
-      <h1>Convex Chat-GPT</h1>
-      <p>Disclaimer: Any identities here are not real. Just robots.</p>
+      <h1>ArguMentor</h1>
+      <p> The following are LLMs that can argue with you and provide useful criticism for your ideas! </p>
       {status === "CanLoadMore" && (
         <button onClick={() => loadMore(100)}>Load More</button>
       )}

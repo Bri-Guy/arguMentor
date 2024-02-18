@@ -37,7 +37,7 @@ export function AddIdentity() {
           <textarea
             value={newIdentityInstructions}
             onChange={(event) => setNewIdentityInstructions(event.target.value)}
-            placeholder="GPT3 Instructions"
+            placeholder="Write a system prompt to set the model personality!"
             rows={2}
             cols={40}
           />

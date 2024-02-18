@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", helvetica,
+  font-family: system-ui, "Playfair Display", "Poppins", Roboto,
     sans-serif;
 }
 
@@ -30,8 +30,8 @@ h1 {
   margin-bottom: 16px;
 }
 .badge span {
-  background-color: #212529;
-  color: #ffffff;
+  background-color: #6C584C;
+  color: #F0EAD2;
   border-radius: 6px;
   font-weight: bold;
   padding: 4px 8px 4px 8px;
@@ -53,7 +53,7 @@ h1 {
 ul {
   margin: 8px;
   border-radius: 8px;
-  border: solid 1px lightgray;
+  border: solid 1px #F0EAD2;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
@@ -65,7 +65,7 @@ li {
   display: flex;
   justify-content: flex-start;
   padding: 8px 16px 8px 16px;
-  border-bottom: solid 1px lightgray;
+  border-bottom: solid 1px #F0EAD2;
   font-size: 16px;
 }
 
@@ -83,7 +83,7 @@ li span:nth-child(2) {
   word-break: break-word;
 }
 li span:nth-child(3) {
-  color: #6c757d;
+  color: #DDE5B6;
   margin-left: auto;
   white-space: nowrap;
 }
@@ -96,7 +96,7 @@ form {
 input:not([type]) {
   padding: 6px 12px 6px 12px;
   color: rgb(33, 37, 41);
-  border: solid 1px rgb(206, 212, 218);
+  border: solid 1px #F0EAD2;
   border-radius: 8px;
   font-size: 16px;
 }
@@ -104,7 +104,7 @@ input:not([type]) {
 textarea {
   padding: 6px 12px 6px 12px;
   color: rgb(33, 37, 41);
-  border: solid 1px rgb(206, 212, 218);
+  border: solid 1px #F0EAD2;
   border-radius: 8px;
   font-size: 16px;
 }
@@ -112,20 +112,20 @@ textarea {
 input[type="submit"],
 button {
   margin-left: 4px;
-  background: lightblue;
-  color: white;
+  background: #DDE5B6;
+  color: #F0EAD2;
   padding: 6px 12px 6px 12px;
   border-radius: 8px;
   font-size: 16px;
-  background-color: rgb(49, 108, 244);
+  background-color: #ADC178;
 }
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: rgb(41, 93, 207);
+  background-color: #ADC178;
 }
 
 input[type="submit"]:disabled,
 button:disabled {
-  background-color: rgb(122, 160, 248);
+  background-color: #ADC178;
 }
