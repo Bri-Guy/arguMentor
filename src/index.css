@@ -111,8 +111,9 @@ li span:nth-child(3) {
 }
 
 summary {
-  background-color: #6C584C;
+  background-color: #BBA899;
   color: white;
+  border-radius: 10px;
 }
 
 form {
