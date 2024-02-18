@@ -16,7 +16,6 @@ import type {
 } from "convex/server";
 import type * as identity from "../identity.js";
 import type * as messages from "../messages.js";
-import type * as model from "../model.js";
 import type * as openai from "../openai.js";
 import type * as threads from "../threads.js";
 
@@ -31,7 +30,6 @@ import type * as threads from "../threads.js";
 declare const fullApi: ApiFromModules<{
   identity: typeof identity;
   messages: typeof messages;
-  model: typeof model;
   openai: typeof openai;
   threads: typeof threads;
 }>;
