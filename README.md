@@ -18,4 +18,4 @@ If you're looking for something even more custom, you have the ability to even c
 
 # How to Use
 
-First, choose a 
+First, choose an agent that you want to simulate a situation with. After, input information about your situation - i.e. if the situation is a research fair, a class discussion, etc. Then, sit back and let our platform work its magic!  
