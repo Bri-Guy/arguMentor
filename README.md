@@ -6,7 +6,7 @@ We believe that most LLMs are too agreeable, which is nice but not incredibly co
 
 We see our application functioning primarily in the education space - whether being used to prepare for thesis defenses, research panels, or class discussions, our application provides users with questions that challenge ideas and provoke more critical thought. 
 
-# Use Case 
+# Educational Use Cases 
 
 Our application provides users with agents that can portray different scenarios, enabling users to find a customized scenario for their situation. 
 
@@ -19,3 +19,10 @@ If you're looking for something even more custom, you have the ability to even c
 # How to Use
 
 First, choose an agent that you want to simulate a situation with. After, input information about your situation - i.e. if the situation is a research fair, a class discussion, etc. Then, sit back and let our platform work its magic!  
+
+# Resources Used
+
+We fine-tuned our LLM to reflect more critical thinking with an Anthropic dataset using Together.ai. Additionally, we created a second model that was fine-tuned using Monster API. Our front-end was modeled off of a Convex template and our backend is also powered by Convex. 
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nea.com%2Fteam%2Faaron-jacobson&psig=AOvVaw2mn5XMuvGJTv27JYWc-zhX&ust=1708336778627000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKC348jQtIQDFQAAAAAdAAAAABAQ![image](https://github.com/Bri-Guy/criticaLLM/assets/77946607/c45f5e24-563b-40dc-8458-cea7a81d9120)
+
