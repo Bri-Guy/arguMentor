@@ -31,7 +31,7 @@ h1 {
   margin-bottom: 16px;
 }
 .badge span {
-  background-color: #6C584C;
+  background-color: #4ecca3;
   color: #F0EAD2;
   border-radius: 6px;
   font-weight: bold;
@@ -75,7 +75,7 @@ li:last-child {
 }
 
 li span:nth-child(1) {
-  color: #A98467;
+  color: #4ecca3;
   font-weight: bold;
   margin-right: 4px;
   white-space: nowrap;
@@ -85,7 +85,7 @@ li span:nth-child(2) {
   word-break: break-word;
 }
 li span:nth-child(3) {
-  color: #A98467;
+  color: #4ecca3;
   margin-left: auto;
   white-space: nowrap;
 }
@@ -123,7 +123,7 @@ button {
   padding: 6px 12px 6px 12px;
   border-radius: 8px;
   font-size: 16px;
-  background-color: #41710D;
+  background-color: #4ecca3;
 }
 
 input[type="submit"]:hover,
