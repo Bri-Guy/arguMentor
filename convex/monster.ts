@@ -5,7 +5,7 @@ import { Doc, Id } from "./_generated/dataModel";
 import { v } from "convex/values";
 import axios from 'axios';
 
-const monsterApiKey = '6ab498f2-3749-4abb-833a-6c54d48eb0dc';
+const monsterApiKey = 'INSERT API KEY HERE';
 const apiUrl = 'https://68c611d9-c026-4477-a296-9e017e39a15f.monsterapi.ai/generate';
 
 const inputs = {
