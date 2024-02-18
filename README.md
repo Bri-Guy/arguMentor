@@ -1,4 +1,4 @@
-###ArguMentor
+# ArguMentor
 
 Hello! We are ArguMentor, and our application productively challenges your arguments rather than agreeing with them. 
 
