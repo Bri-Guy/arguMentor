@@ -82,7 +82,7 @@ export const chat = action({
       const openaiResponse = await openai.createChatCompletion({
         model: "xu.briguy@gmail.com/Mistral-7B-Instruct-v0.2-2024-02-17-20-53-49",
         messages: gptMessages,
-        stop: ["<human>", "<SYS>", "<<SYS>>", "[/INST]", "</s>", "<</SYS>>"],
+        stop: ["<human>", "<SYS>", "<<SYS>>", "[/INST]", "</s>", "<</SYS>>", "\n\n"],
         max_tokens: 150,
       });
       await ctx.runMutation(internal.messages.update, {
