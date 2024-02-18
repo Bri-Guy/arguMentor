@@ -29,6 +29,7 @@ export default function App() {
       {status === "CanLoadMore" && (
         <button onClick={() => loadMore(100)}>Load More</button>
       )}
+      <br></br>
       {messages
         .reduce<UIMessage[][]>((threads, message) => {
           const thread = threads.find(
@@ -50,6 +51,7 @@ export default function App() {
             <Thread messages={messages} threadId={messages[0].threadId} />
           </details>
         ))}
+        <br></br>
       {newThreadId && (
         <>
           <Thread messages={[]} threadId={newThreadId} />

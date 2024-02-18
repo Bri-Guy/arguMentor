@@ -1,19 +1,19 @@
 /* reset */
 * {
   margin: 0;
-  padding: 0;
+  padding: 2em;
   border: 0;
   line-height: 1.5;
 }
 
 body {
-  font-family: system-ui, "Playfair Display", "Poppins", Roboto,
+  font-family: "Playfair Display", "Poppins", Roboto,
     sans-serif;
 }
 
 main {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   width: min(800px, 95vw);
   margin: 0 auto;
 }
@@ -74,6 +74,7 @@ li:last-child {
 }
 
 li span:nth-child(1) {
+  color: #A98467;
   font-weight: bold;
   margin-right: 4px;
   white-space: nowrap;
@@ -83,7 +84,7 @@ li span:nth-child(2) {
   word-break: break-word;
 }
 li span:nth-child(3) {
-  color: #DDE5B6;
+  color: #A98467;
   margin-left: auto;
   white-space: nowrap;
 }
@@ -117,12 +118,12 @@ button {
   padding: 6px 12px 6px 12px;
   border-radius: 8px;
   font-size: 16px;
-  background-color: #ADC178;
+  background-color: #41710D;
 }
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: #ADC178;
+  background-color: #90BA64;
 }
 
 input[type="submit"]:disabled,
