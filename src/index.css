@@ -20,7 +20,9 @@
   font-style: normal;
 }
 
-body {
+body,
+button,
+select {
   font-family: 'Biko', 'Open Sans',
     sans-serif;
 }
@@ -43,6 +45,7 @@ h1 {
   text-align: center;
   margin-bottom: 16px;
 }
+
 .badge span {
   background-color: #4ecca3;
   color: #F0EAD2;
@@ -55,6 +58,7 @@ h1 {
 .instructions {
   text-align: center;
 }
+
 .instructions span {
   color: #6c757d;
 }
@@ -93,10 +97,12 @@ li span:nth-child(1) {
   margin-right: 4px;
   white-space: nowrap;
 }
+
 li span:nth-child(2) {
   margin-right: 4px;
   word-break: break-word;
 }
+
 li span:nth-child(3) {
   color: #4ecca3;
   margin-left: auto;
@@ -110,8 +116,10 @@ summary {
 }
 
 img {
-  max-width: 100%; /* Ensure the logo doesn't exceed the width of its container */
-  height: auto; /* Maintain the aspect ratio */
+  max-width: 100%;
+  /* Ensure the logo doesn't exceed the width of its container */
+  height: auto;
+  /* Maintain the aspect ratio */
 }
 
 form {
@@ -144,6 +152,8 @@ button {
   border-radius: 8px;
   font-size: 16px;
   background-color: #379634;
+  font-family: 'Biko', 'Open Sans',
+    sans-serif;
 }
 
 input[type="submit"]:hover,
@@ -153,5 +163,6 @@ button:hover {
 
 input[type="submit"]:disabled,
 button:disabled {
+  color: #6c757d;
   background-color: #F0EAD2;
 }

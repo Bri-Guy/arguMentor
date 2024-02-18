@@ -72,6 +72,44 @@ export const send = internalMutation({
   },
 });
 
+export const receive = internalMutation({
+  args: {
+    identityName: v.string(),
+    threadId: v.id("threads"),
+  },
+  handler: async (ctx, { identityName, threadId }) => {
+    const identity = await ctx.db
+      .query("identities")
+      .filter((q) => q.eq(q.field("name"), identityName))
+      .unique();
+    if (!identity) throw new Error("Can't find identity " + identityName);
+    const { instructions, _id: identityId } = identity;
+    const botMessageId = await ctx.db.insert("messages", {
+      author: "assistant",
+      threadId,
+      identityId,
+    });
+    const messageDocs = await ctx.db
+      .query("messages")
+      .order("desc")
+      .filter((q) => q.eq(q.field("error"), undefined))
+      .filter((q) => q.eq(q.field("threadId"), threadId))
+      .filter((q) => q.neq(q.field("body"), undefined))
+      .take(21); // 10 pairs of prompt/response and our most recent message.
+    const messages = await Promise.all(
+      messageDocs.reverse().map(async (msg) => {
+        let instructions = undefined;
+        if (msg.identityId) {
+          const identity = (await ctx.db.get(msg.identityId))!;
+          instructions = identity.instructions;
+        }
+        return { ...msg, instructions, user: undefined };
+      })
+    );
+    return { instructions, messages, botMessageId };
+  },
+});
+
 export const update = internalMutation({
   handler: async (
     ctx,
