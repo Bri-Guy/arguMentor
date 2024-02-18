@@ -4,7 +4,10 @@ Hello! We are **ArguMentor**, and our application *productively challenges your 
 
 We believe that most LLMs are too agreeable, which is nice but not incredibly conducive to all use cases. That's where ArguMentor steps in - our application actively debates with you over your ideas to highlight flaws and weaknesses in your argument. 
 
-We see our application functioning primarily in the education space - whether being used to prepare for thesis defenses, research panels, or class discussions, our application provides users with questions that challenge ideas and provoke more critical thought. 
+We see our application functioning primarily in the education space - whether being used to prepare for thesis defenses, research panels, or class discussions, our application provides users with questions that challenge ideas and provoke more critical thought.
+
+![Screenshot 2024-02-17 at 11 53 06 PM](https://github.com/Bri-Guy/criticaLLM/assets/77946607/6e6970a5-1b83-434e-ae43-ed5eecf6a102)
+
 
 # Educational Use Cases 
 
@@ -19,6 +22,9 @@ If you're looking for something even more custom, you have the ability to even c
 # How to Use
 
 First, choose an agent that you want to simulate a situation with. After, input information about your situation - i.e. if the situation is a research fair, a class discussion, etc. Then, sit back and let our platform work its magic!  
+
+![Screenshot 2024-02-17 at 11 55 09 PM](https://github.com/Bri-Guy/criticaLLM/assets/77946607/a4bd9ad1-1114-43c4-a4dc-360f90b3d6d2)
+
 
 # Resources Used
 
