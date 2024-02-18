@@ -22,7 +22,7 @@ First, choose an agent that you want to simulate a situation with. After, input 
 
 # Resources Used
 
-We fine-tuned our LLM to reflect more critical thinking with an Anthropic dataset using [Together.ai] (https://www.together.ai). Additionally, we created a second model that was fine-tuned using [Monster API] (https://monsterapi.ai/). Our front-end was modeled off of a Convex template and our backend is also powered by [Convex] (https://www.convex.dev). 
+We fine-tuned our LLM to reflect more critical thinking with an Anthropic dataset using [Together.ai](https://www.together.ai). Additionally, we created a second model that was fine-tuned using [Monster API](https://monsterapi.ai/). Our front-end was modeled off of a Convex template and our backend is also powered by [Convex](https://www.convex.dev). 
 
 
 
