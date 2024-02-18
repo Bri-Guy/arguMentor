@@ -11,7 +11,9 @@ We see our application functioning primarily in the education space - whether be
 Our application provides users with agents that can portray different scenarios, enabling users to find a customized scenario for their situation. 
 
 > A researcher preparing for a research panel might use our application to simulate a Q&A session to prepare for questions that might be asked
+
 > A PhD student might use our application to get ready to defend their thesis
+
 > Even in everyday scenarios, our application can be useful for simulating discussions involving multiple viewpoints to providing counterarguments for an essay.
 
 If you're looking for something even more custom, you have the ability to even create custom agents yourself!
