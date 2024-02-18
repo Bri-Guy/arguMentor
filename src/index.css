@@ -6,8 +6,16 @@
   line-height: 1.5;
 }
 
+@font-face {
+  font-family: 'Biko';
+  src: url('biko/Biko_Regular.otf') format('otf'),
+       url('biko/Biko_Black.otf') format('otf'),
+       url('biko/Biko_Bold.otf') format('otf');
+  /* Add additional font formats as needed */
+}
+
 body {
-  font-family: "Playfair Display", "Poppins", Roboto,
+  font-family: "Biko", Roboto,
     sans-serif;
 }
 
